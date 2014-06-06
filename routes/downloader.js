@@ -10,7 +10,6 @@ exports.mp4 = function (req, res) {
     var id = req.params.id;
     var file = id;
     var dir = '/node/down/public/user-files/';
-    console.log('variaveis');
 
     exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" H2sgBwicbF0', function (error, stdout, stderr) {
         if (error) throw error;
@@ -28,22 +27,5 @@ exports.mp4 = function (req, res) {
                 res.write('<a href="http://74.118.192.245:3000/public/user-files/'+file+'-downyt.mp4" download>Click to download</a>');
             });
         });
-        //exec(ffmpeg.trim());
-        //console.log(youtube_dl);
-        //exec('ffmpeg -i ' + dir + stdout + ' ' + dir + file + '.mp4')
-        //var _file = dir + file + '.mp4';
-        //res.download(_file);
-        //res.write('testando resultados... var error:'+error+'  / var stdout:'+stdout+'  /var stderr'+stderr);
     });
-    /*
-     exec('cd /down/node');
-     //exec('youtube-dl --get-filename -o '+id+'".%(ext)s"' + id);
-     console.log('youtube-dl -o '+file+'.tmp https://www.youtube.com/watch?v='+id);
-     //exec('ffmpeg -i /public/user-files/'+file+'.tmp /public/user-files/'+file+'.mp4');
-     console.log('ffmpeg -i'+file+'.tmp '+file+'.mp4');
-     res.write('ffmpeg -i /public/user-files/'+file+'.tmp /public/user-files/'+file+'.mp4   ')
-     res.write('youtube-dl --get-filename -o '+id+'".%(ext)s" ' + id);
-     res.end();
-     /*
-     */
 };

@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloader.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="downloader.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/downloader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="612">
+            <state line="24" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.6980462" vertical-offset="15" max-vertical-offset="578">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="24" selection-start="326" selection-end="326" vertical-scroll-proportion="0.35687023" vertical-offset="0" max-vertical-offset="524">
+            <state line="11" column="24" selection-start="326" selection-end="326" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -127,8 +127,8 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/routes/downloader.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/routes/downloader.js" />
       </list>
     </option>
   </component>
@@ -457,15 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/downloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="612">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="1" selection-start="211" selection-end="211" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
@@ -475,8 +466,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="326" selection-end="326" vertical-scroll-proportion="0.35687023" vertical-offset="0" max-vertical-offset="524">
+        <state line="11" column="24" selection-start="326" selection-end="326" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/downloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.6980462" vertical-offset="15" max-vertical-offset="578">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

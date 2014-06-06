@@ -15,17 +15,15 @@ exports.mp4 = function (req, res) {
         if (error) throw error;
 
         var youtube_dl = 'youtube-dl -o ' + dir + stdout + ' ' + id
-        var youtube_dl = youtube_dl.replace(/(\r\n|\n|\r)/gm,"");
+        var youtube_dl = youtube_dl.replace(/(\r\n|\n|\r)/gm, "");
         var ffmpeg = 'ffmpeg -i ' + dir + stdout + ' ' + dir + file + '-downyt.mp4';
-        var ffmpeg = ffmpeg.replace(/(\r\n|\n|\r)/gm,"");
+        var ffmpeg = ffmpeg.replace(/(\r\n|\n|\r)/gm, "");
         //exec('youtube-dl -o ' + dir + stdout + ' ' + id);
         //res.send(youtube_dl);
         exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
             console.log(stdout2);
-            exec(ffmpeg.trim(), function (error3, stdout3, stderr3) {
-                console.log(stdout3);
-                res.write('<a href="http://74.118.192.245:3000/public/user-files/'+file+'-downyt.mp4" download>Click to download</a>');
-            });
+            res.write('<a href="http://74.118.192.245:3000/user-files/' + file + '.mp4" download>Click to download</a>');
+            res.end();
         });
     });
 };

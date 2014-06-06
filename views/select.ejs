@@ -1,18 +1,22 @@
 <div class="row panel exibir radius">
-    <h3><%= video.title.split("+").join(" ") %></h3>
+    <h3><%= title %></h3>
     <iframe width="560" height="315" src="//www.youtube.com/embed/<%= id %>" frameborder="0" allowfullscreen></iframe>
     <a href="#" data-dropdown="drop" class="large-5 medium-5 columns button radius envia dropdown">Download Video</a>
-        <ul id="drop" data-dropdown-content class="f-dropdown">
+    <ul id="drop" data-dropdown-content class="f-dropdown">
         <%
-        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        if(typeof _ref == 'string'){ %>
+        <li><a href="http://74.118.192.245:3000/download/mp4/<%= id %>">Original format</a></li>
+        <% }
+        else{
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             urlEncodedStream = _ref[_i];
             stream = decodeQueryString(urlEncodedStream);
             type = stream.type.split(";")[0];
             quality = stream.quality.split(",")[0];
             stream.original_url = stream.url;
-            stream.url = "" + stream.url + "&signature=" + stream.sig
-        %>
-       <li><a download href="<%= stream.url  %>"><%= type %></a></li>
+            stream.url = "" + stream.url + "&signature=" + stream.sig %>
+        <li><a download href="<%= stream.url %>"><%= type %></a></li>
+        <% } %>
         <% } %>
 
     </ul>

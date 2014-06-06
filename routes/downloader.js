@@ -4,14 +4,12 @@
 
 exports.mp4 = function (req, res) {
     var fs = require('fs');
-    var path = require('path');
-    var mime = require('mime');
     var exec = require('child_process').exec;
     var id = req.params.id;
     var file = id;
     var dir = '/node/down/public/user-files/';
 
-    exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" H2sgBwicbF0', function (error, stdout, stderr) {
+    exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" '+id, function (error, stdout, stderr) {
         if (error) throw error;
 
         var youtube_dl = 'youtube-dl -o ' + dir + stdout + ' ' + id

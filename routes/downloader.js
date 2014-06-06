@@ -3,16 +3,21 @@
  */
 
 exports.mp4 = function (req, res) {
+    var sys = require('sys')
+    var exec = require('child_process').exec;
     var fs = require('fs');
-    ytdl = require('ytdl');
-    var id = req.params.id;
-    var file = id + '.mp4';
     var path = require('path');
-    ytdl('https://www.youtube.com/watch?v=' + id, { filter: function (format) {
-        return format.container === 'mp4';
-    }, err: function(){
-    console.log(err);
-    }})
-        .pipe(fs.createWriteStream(file));
-        res.download(path.basename(file), {root: path.dirname(file)});
+    var id = req.params.id;
+    var file = id;
+    exec('youtube-dl -o '+file+'.tmp https://www.youtube.com/watch?v='+id);
+    exec('ffmpeg -i'+file+'.tmp '+file+'.mp4');
+
+    var _file = __dirname + '/public/user-files/' + file +'.mp4';
+    var filename = path.basename(_file);
+    var mimetype = mime.lookup(_file);
+
+    res.setHeader('Content-disposition', 'attachment; filename=' + filename);
+    res.setHeader('Content-type', mimetype);
+    var filestream = fs.createReadStream(_file);
+    filestream.pipe(res);
 };

@@ -1,13 +1,10 @@
 <form class="row" id="url" align="center" style="padding-top:130px;" method="post" action="select_type.php">
     <div class="large-10 medium-10 columns">
-        <input type="text" placeholder="URL do video" class="radius" name="vid">
+        <input type="text" placeholder="URL do video" class="radius" name="vid" pattern="/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;"   oninvalid="setCustomValidity('Not a valid url from youtube')"
+               onchange="try{setCustomValidity('')}catch(e){}">
     </div>
     <div class="large-2 medium-2 columns right">
         <button id="bt1" class="button tiny radius envia"><b>Enviar</b></button>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script>
-        $(document).ready(function(){
-        });
-    </script>
 </form>

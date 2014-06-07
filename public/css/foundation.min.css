@@ -2,8 +2,12 @@
 
 body {
     border-top: 10px solid firebrick;
+    min-height: 900px;
 }
-
+.logo{
+    background:url(../img/logo.png) center center no-repeat;
+    height:100px;
+}
 .envia {
     background-image: -moz-linear-gradient(90deg, rgb(175, 26, 22) 0%, rgb(205, 24, 31) 100%) !important;
     background-image: -webkit-linear-gradient(90deg, rgb(175, 26, 22) 0%, rgb(205, 24, 31) 100%) !important;
@@ -12,7 +16,6 @@ body {
     color: white !important;
     transition: 600ms ease all !important;
 }
-
 .envia:hover {
     transition: 600ms ease all !important;
     background-image: -moz-linear-gradient(90deg, rgb(205, 24, 31) 0%, rgb(175, 26, 22) 100%) !important;

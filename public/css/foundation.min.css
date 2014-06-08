@@ -49,3 +49,7 @@ input {
     width: 100%;
     height: 400px;
 }
+.alert{
+    border-color: transparent !important;
+    background-color:firebrick !important;
+}

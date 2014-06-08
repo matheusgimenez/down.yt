@@ -19,7 +19,7 @@ exports.select = function (req, res) {
         res.send("Error: Verique sua URL 1");
     }
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v='+id, function (validate_error, validate_response, validate_content){
-        if (validate_response.statusCode == 200) {
+        if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
             request('http://www.youtube.com/get_video_info?video_id=' + id, function (error, response, content) {
                 if (!error && response.statusCode != 200) {
                     res.send('Algo errado por aqui :(  2');

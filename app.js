@@ -33,7 +33,8 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/select/:id', select.select);
-app.get('/download/mp4/:id', downloader.mp4);
+app.get('/download/original/:id', downloader.original);
+app.get('/download/audio/:id', downloader.audio);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

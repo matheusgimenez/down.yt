@@ -50,7 +50,7 @@ exports.audio = function (req, res) {
                 exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
                     console.log(stdout2);
                     if(error2){console.log('deuerro?')}
-                    var ffmpeg = 'ffmpeg -i ' + dir + temp_name + ' ' + dir + file + '.mp3';
+                    var ffmpeg = 'cd ~/bin && ./ffmpeg -i ' + dir + temp_name + ' ' + dir + file + '.mp3';
                     var ffmpeg = ffmpeg.replace(/(\r\n|\n|\r)/gm, "");
                     exec(ffmpeg.trim(), function (error3, stdout3, stderr3) {
                         if(error3){console.log(error3)}

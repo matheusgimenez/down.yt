@@ -18,7 +18,7 @@ exports.original = function (req, res) {
                 //res.send(youtube_dl);
                 exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
                     console.log(stdout2);
-                    res.write('<a class="large-12 medium-12 columns button radius envia" href="http://74.118.192.245:3000/user-files/' + file + '.mp4" download>Click to download</a>');
+                    res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp4" download>Click to download</a>');
                     res.end();
                 });
             });
@@ -56,7 +56,7 @@ exports.audio = function (req, res) {
                     fs.open(dir+file+'.mp3', "r", function(error, fd) {
                         if (!error) {
                             console.log('existe');
-                            res.write('<a class="large-12 medium-12 columns button radius envia" href="http://74.118.192.245:3000/user-files/' + file + '.mp3" download>Click to download</a>');
+                            res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp3" download>Click to download</a>');
                             res.end();
                         }
                         else{
@@ -64,7 +64,7 @@ exports.audio = function (req, res) {
                             exec(ffmpeg.trim(), function (error3, stdout3, stderr3) {
                                 if(error3){console.log(error3)}
                                 console.log('deu erro?');
-                                res.write('<a class="large-12 medium-12 columns button radius envia" href="http://74.118.192.245:3000/user-files/' + file + '.mp3" download>Click to download</a>');
+                                res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp3" download>Click to download</a>');
                                 res.end();
                             });
                         }

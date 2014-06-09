@@ -2,7 +2,6 @@
 
 body {
     border-top: 10px solid firebrick;
-    min-height: 900px;
 }
 .logo{
     background:url(../img/logo.png) center center no-repeat;
@@ -52,4 +51,10 @@ input {
 .alert{
     border-color: transparent !important;
     background-color:firebrick !important;
+}
+.reveal-modal-bg{
+    background: rgba(0,0,0,0.95);
+}
+.f-dropdown{
+    z-index:40;
 }

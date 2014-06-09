@@ -1,11 +1,11 @@
-<div class="row panel exibir radius">
+<div class="row panel exibir radius" id="select" data-id="<%= id %>">
     <h3><%= title %></h3>
     <iframe width="560" height="315" src="//www.youtube.com/embed/<%= id %>" frameborder="0" allowfullscreen></iframe>
     <a href="#" data-dropdown="drop" class="large-5 medium-5 columns button radius envia dropdown">Download Video</a>
     <ul id="drop" data-dropdown-content class="f-dropdown">
         <%
         if(typeof _ref == 'string'){ %>
-        <li><a href="http://74.118.192.245:3000/download/mp4/<%= id %>">Original format</a></li>
+        <li><a id="bt-origin">Original format</a></li>
         <% }
         else{
                 for (_i = 0, _len = _ref.length; _i < _len; _i++) {
@@ -23,4 +23,5 @@
         <% } %>
 
     </ul>
+    <a id="bt-mp3" href="#" class="large-5 medium-5 columns button radius envia right">Download Audio (MP3)</a>
 </div>

@@ -51,3 +51,6 @@ input {
 .f-dropdown{
     z-index:40;
 }
+.error{
+    margin-top:40px;
+}

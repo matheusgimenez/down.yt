@@ -44,9 +44,7 @@ exports.select = function (req, res) {
             });
         }
         else{
-            res.write('5b43c0c536da6fe7bb79286722470822/ / ');
-            res.write('ID or URL is wrong');
-            res.end();
+            res.render('error.ejs',{message:'Ooops.. This ID is wrong or been deleted :('})
         }
     });
 };

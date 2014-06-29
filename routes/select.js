@@ -38,13 +38,13 @@ exports.select = function (req, res) {
                         _ref = video.url_encoded_fmt_stream_map.split(",");
                     }
                     res.render('select.ejs', {quality: quality, sources: sources, stream: stream, type: type,
-                        urlEncodedStream: urlEncodedStream, _i: _i, _len: _len, _ref: _ref, video: video, id: id, title: title});
+                        urlEncodedStream: urlEncodedStream, _i: _i, _len: _len, _ref: _ref, video: video, id: id, title: title, url: siteinfo.url});
                     console.log('passou render');
                 });
             });
         }
         else{
-            res.render('error.ejs',{message:'Ooops.. This ID is wrong or been deleted :('})
+            res.render('error.ejs',{message:'Ooops.. This ID is wrong or been deleted', url: siteinfo.url});
         }
     });
 };

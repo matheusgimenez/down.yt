@@ -9,6 +9,7 @@ exports.original = function (req, res) {
     var dir = '/node/down/public/user-files/';
     var request = require('request');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
+        var id = id.replace(/(["\s'$`\\])/g,'\\$1');
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
             exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" ' + id, function (error, stdout, stderr) {
                 if (error) throw error;
@@ -18,7 +19,7 @@ exports.original = function (req, res) {
                 //res.send(youtube_dl);
                 exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
                     console.log(stdout2);
-                    res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp4" download>Click to download</a>');
+                    res.write('<a class="large-12 medium-12 columns button radius envia" href="'+app.url+'/user-files/' + file + '.mp4" download>Click to download</a>');
                     res.end();
                 });
             });
@@ -40,6 +41,7 @@ exports.audio = function (req, res) {
     var fs = require('fs');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
+            var id = id.replace(/(["\s'$`\\])/g,'\\$1');
             exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" ' + id, function (error, stdout, stderr) {
                 if (error) throw error;
                 var temp_name = stdout;
@@ -56,7 +58,7 @@ exports.audio = function (req, res) {
                     fs.open(dir+file+'.mp3', "r", function(error, fd) {
                         if (!error) {
                             console.log('existe');
-                            res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp3" download>Click to download</a>');
+                            res.write('<a class="large-12 medium-12 columns button radius envia" href="http://'+siteinfo.url+'/user-files/' + file + '.mp3" download>Click to download</a>');
                             res.end();
                         }
                         else{
@@ -64,7 +66,7 @@ exports.audio = function (req, res) {
                             exec(ffmpeg.trim(), function (error3, stdout3, stderr3) {
                                 if(error3){console.log(error3)}
                                 console.log('deu erro?');
-                                res.write('<a class="large-12 medium-12 columns button radius envia" href="http://down.yt/user-files/' + file + '.mp3" download>Click to download</a>');
+                                res.write('<a class="large-12 medium-12 columns button radius envia" href="'+siteinfo.url+'/user-files/' + file + '.mp3" download>Click to download</a>');
                                 res.end();
                             });
                         }

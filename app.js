@@ -11,7 +11,8 @@ var express = require('express')
 var app = module.exports = express.createServer();
 
 // Configuration
-
+siteinfo = {};
+siteinfo.url = 'http://localhost';
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');

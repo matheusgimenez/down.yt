@@ -26,7 +26,7 @@ exports.select = function (req, res) {
                 }
                 var quality, sources, stream, type, urlEncodedStream, _i, _len, _ref;
                 var video = decodeQueryString(content);
-                exec(' youtube-dl --get-filename -o ' + '"%(title)s" ' + id, function (error, stdout, stderr) {
+                exec(' youtube-dl --get-filename -o ' + '"%(title)s" http://www.youtube.com/watch?v=' + id, function (error, stdout, stderr) {
                     console.log(stdout);
                     var title = stdout;
 

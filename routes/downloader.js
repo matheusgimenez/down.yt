@@ -5,15 +5,15 @@
 exports.original = function (req, res) {
     var exec = require('child_process').exec;
     var id = req.params.id;
+    var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/node/down/public/user-files/';
+    var dir = '/home/node/down.yt/public/user-files/';
     var request = require('request');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
-        var id = id.replace(/(["\s'$`\\])/g,'\\$1');
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
-            exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" ' + id, function (error, stdout, stderr) {
+            exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" http://www.youtube.com/watch?v=' + id, function (error, stdout, stderr) {
                 if (error) throw error;
-                var youtube_dl = 'youtube-dl -o ' + dir + stdout + ' ' + id
+                var youtube_dl = 'youtube-dl -o ' + dir + stdout + ' http://www.youtube.com/watch?v=' + id;
                 var youtube_dl = youtube_dl.replace(/(\r\n|\n|\r)/gm, "");
                 //exec('youtube-dl -o ' + dir + stdout + ' ' + id);
                 //res.send(youtube_dl);
@@ -35,17 +35,17 @@ exports.audio = function (req, res) {
     var exec = require('child_process').exec;
     var fs = require('fs');
     var id = req.params.id;
+    var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/node/down/public/user-files/';
+    var dir = '/home/node/down.yt/public/user-files/';
     var request = require('request');
     var fs = require('fs');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
-            var id = id.replace(/(["\s'$`\\])/g,'\\$1');
-            exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" ' + id, function (error, stdout, stderr) {
+            exec(' youtube-dl --get-filename -o ' + id + '".%(ext)s" http://www.youtube.com/watch?v=' + id, function (error, stdout, stderr) {
                 if (error) throw error;
                 var temp_name = stdout;
-                var youtube_dl = 'youtube-dl -o ' + dir + temp_name + ' ' + id;
+                var youtube_dl = 'youtube-dl -o ' + dir + temp_name + ' http://www.youtube.com/watch?v=' + id;
                 var youtube_dl = youtube_dl.replace(/(\r\n|\n|\r)/gm, "");
                 //exec('youtube-dl -o ' + dir + stdout + ' ' + id);
                 //res.send(youtube_dl);

@@ -1,14 +1,23 @@
-<div class="row panel exibir radius" id="select" data-id="<%= id %>">
-    <h3><%= title %></h3>
-    <iframe width="560" height="315" src="//www.youtube.com/embed/<%= id %>" frameborder="0" allowfullscreen></iframe>
-    <a href="#" data-dropdown="drop" class="large-5 medium-5 columns button radius envia dropdown">Download Video</a>
-    <ul id="drop" data-dropdown-content class="f-dropdown">
+<div id="container">
+  <div id="name-video"><%= title %></div>
+  <div id="the-video">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/<%= id %>" frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+<div id="buttoms">
+    <a href="#video-op">
+      <div id="download-video">
+        Download video 
+        <span id="dow">
+          ▼ 
+      </span>
+      <ul id="vd-o">
         <%
         if(typeof _ref == 'string'){ %>
         <li><a id="bt-origin">Original format</a></li>
         <% }
-        else{
-                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    else{
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             urlEncodedStream = _ref[_i];
             stream = decodeQueryString(urlEncodedStream);
             type = stream.type.split(";")[0];
@@ -16,12 +25,44 @@
             stream.original_url = stream.url;
             typestr = new String(type).trim();
             stream.url = "" + stream.url + "&signature=" + stream.sig
-                if(typestr == 'video/mp4' || typestr == 'video/3gpp' ){  %>
-        <li><a href="<%= stream.url %>" download="<%= id %>"><%= type + ' - '+ quality %></a></li>
-        <% }
+            if(typestr == 'video/mp4' || typestr == 'video/3gpp' ){  %>
+            <li><a href="<%= stream.url %>" download="<%= id %>"><%= type + ' - '+ quality %></a></li>
+            <% }
         } %>
         <% } %>
-
-    </ul>
-    <a id="bt-mp3" href="#" class="large-5 medium-5 columns button radius envia right">Download Audio (MP3)</a>
+        <li>
+            <a href="#1">
+              MP4
+          </a>
+      </li>
+      <li>
+        <a href="#2">
+          3GP
+      </a>
+  </li>
+  <li>
+    <a href="#3">
+      AVI
+  </a>
+</li>
+</ul>
+</div>
+</a>
+<a href="#" data-reveal-id="musicModal">
+  <div id="download-mp3" >
+    Baixar Áudio (MP3)
+</div>
+</a>
+<div id="musicModal" class="reveal-modal" data-reveal>
+  <span id="modalTitle">
+    Baixar MP3
+</span>
+<span id="modalTxt">
+    Preparando arquivo por favor Aguarde!
+</span>
+<div id="DowBtt">
+    Carregando...
+</div>
+</div>
+</div>
 </div>

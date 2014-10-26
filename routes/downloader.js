@@ -7,7 +7,7 @@ exports.original = function (req, res) {
     var id = req.params.id;
     var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/home/node/down.yt/public/user-files/';
+    var dir = '/home/deshawn/node/down.yt/public/user-files/';
     var request = require('request');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
@@ -16,7 +16,7 @@ exports.original = function (req, res) {
                 var youtube_dl = 'youtube-dl -o ' + dir + stdout + ' http://www.youtube.com/watch?v=' + id;
                 var youtube_dl = youtube_dl.replace(/(\r\n|\n|\r)/gm, "");
                 //exec('youtube-dl -o ' + dir + stdout + ' ' + id);
-                //res.send(youtube_dl);
+                //console.log(youtube_dl);
                 exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
                     console.log(stdout2);
                     res.write('<a class="large-12 medium-12 columns button radius envia" href="'+app.url+'/user-files/' + file + '.mp4" download>Click to download</a>');
@@ -37,7 +37,7 @@ exports.audio = function (req, res) {
     var id = req.params.id;
     var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/home/node/down.yt/public/user-files/';
+    var dir = '/home/deshawn/node/down.yt/public/user-files/';
     var request = require('request');
     var fs = require('fs');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
@@ -53,7 +53,7 @@ exports.audio = function (req, res) {
                 exec(youtube_dl.trim(), function (error2, stdout2, stderr2) {
                     console.log(stdout2);
                     if(error2){console.log('deuerro?')}
-                    var ffmpeg = 'cd ~/bin && ./ffmpeg -i ' + dir + temp_name + ' ' + dir + file + '.mp3';
+                    var ffmpeg = 'ffmpeg -i ' + dir + temp_name + ' ' + dir + file + '.mp3';
                     var ffmpeg = ffmpeg.replace(/(\r\n|\n|\r)/gm, "");
                     fs.open(dir+file+'.mp3', "r", function(error, fd) {
                         if (!error) {

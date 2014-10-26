@@ -1,3 +1,4 @@
+<div id="select" data-id="<%= id %>"></div><!-- #select -->
 <div id="container">
   <div id="name-video"><%= title %></div>
   <div id="the-video">
@@ -30,38 +31,23 @@
             <% }
         } %>
         <% } %>
-        <li>
-            <a href="#1">
-              MP4
-          </a>
-      </li>
-      <li>
-        <a href="#2">
-          3GP
-      </a>
-  </li>
-  <li>
-    <a href="#3">
-      AVI
-  </a>
-</li>
 </ul>
 </div>
 </a>
-<a href="#" data-reveal-id="musicModal">
+<a id="mp3dl" href="#">
   <div id="download-mp3" >
-    Baixar Áudio (MP3)
+   Download Audio (MP3)
 </div>
 </a>
-<div id="musicModal" class="reveal-modal" data-reveal>
+<div id="musicModal" class="reveal-modal" style="display:none" data-reveal>
   <span id="modalTitle">
-    Baixar MP3
+    Download MP3
 </span>
 <span id="modalTxt">
-    Preparando arquivo por favor Aguarde!
+    Preparing files to download
 </span>
 <div id="DowBtt">
-    Carregando...
+    Loading...
 </div>
 </div>
 </div>

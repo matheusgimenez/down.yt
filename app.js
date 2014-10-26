@@ -12,7 +12,7 @@ var app = module.exports = express.createServer();
 
 // Configuration
 siteinfo = {};
-siteinfo.url = 'http://new.down.yt';
+siteinfo.url = 'http://down.yt';
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');

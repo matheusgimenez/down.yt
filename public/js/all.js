@@ -8,7 +8,6 @@
 		$('#vd-o').hide();
 		$("#download-video").click(function(){
 	 		$("#vd-o").fadeToggle(500);
-
 	 	});
 	 	/**
 	 * Created by matheus on 06/06/14.
@@ -22,7 +21,7 @@
 	    var url = $('#url input').val();
 	    var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
 	    var match = url.match(regExp);
-	    if (match&&match[2].length==11){
+	    if (match && match[2].length == 11){
 	        console.log(match[2]);
 	        location.href = site_url + '/select/' + match[2];
 	    }else{
@@ -32,11 +31,12 @@
 	$('.close').on('click', function(e) {
 	    location.reload();
 	});
-	$('#bt-mp3').on('click', function(e){
-	    $('#mp3').foundation('reveal', 'open');
+	$('#mp3dl').on('click', function(e){
+	    $('#musicModal').foundation('reveal', 'open');
 	    if(count_origin == false){
-	        $('#dl_mp3').load(site_url + '/download/audio/'+id);
+	        $('#DowBtt').load(site_url + '/download/audio/'+id);
 	        count_origin = true;
+	        console.log(id);
 	    }
 	});
 	$('#bt-origin').on('click', function(e){

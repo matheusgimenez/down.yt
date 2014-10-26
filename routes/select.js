@@ -1,5 +1,5 @@
-
 exports.select = function (req, res) {
+    css = 'style-select.css';
     var exec = require('child_process').exec;
     var id = req.params.id;
     request = require('request');

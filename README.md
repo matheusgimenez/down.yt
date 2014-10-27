@@ -9,4 +9,5 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 
 
-# 2014 - Matheus Gimenez
+# 2014 - Matheus Gimenez & Isaque Melo
+# contato@matheusgimenez.com.br  - isaquegbmelo2@gmail.com (Front-End)

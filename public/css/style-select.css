@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
 
 /* Isaque Brasileiro: Front-End - isaquegbmelo2@gmail.com */
 /* Matheus Gimenez : Back-End - youremail@email.com */
@@ -9,7 +10,7 @@ meta.foundation-data-attribute-namespace {
   font-family: false; }
 
 a {text-decoration: none;color: white;}
-@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
+
 
 #all {
 	width: 100%;
@@ -24,6 +25,7 @@ a {text-decoration: none;color: white;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#525254',GradientType=1 );
 	padding-top: 30px;
 	background-attachment: fixed;
+	height: 100%;
 }
 
 #line-top {
@@ -108,6 +110,7 @@ a #item {
 #container{
 
 	width: 591px;
+	height: 428px;
 	background-color: #828283;
 	margin-right: auto;
 	margin-left: auto;
@@ -115,10 +118,10 @@ a #item {
 }
 
 #name-video{
-	font-family: Lao UI;
+	font-family: Lao UI, serif;
 	font-size: 22px;
 	color: white;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 #the-video{
@@ -136,6 +139,7 @@ a #item {
 	line-height: 40px;
 	margin-top: 5px;
 	float: left;
+	font-weight: 300;
 
 }
 

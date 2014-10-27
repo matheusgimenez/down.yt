@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <title>Down.YT - Direct Downloads From YouTube</title>
+  
     <!-- META -->
     <meta charset="UTF-8">
     <meta property="og:title" content=">Down.YT - Direct Downloads From YouTube">
@@ -13,23 +13,13 @@
     <meta name="keywords" content="tags, tag, etc">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE -->
-    <title>
-      Down.YT - Download de Videos do Youtube Online
-  </title>
-  <!-- CSS -->
-  <link rel="stylesheet" href="<%= url %>/css/foundation.min.css">
-  <link rel="stylesheet" href="<%= url %>/css/<%= css %>">
-  <link rel="stylesheet" href="<%= url %>/css/style-font.css">
-  <link rel="stylesheet" href="<%= url %>/css/darktooltip.min.css">
-  <!-- JS (dps colocar embaixo)-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-  </script>
-  <script src="<%= url %>/js/foundation.min.js">
-  </script>
-  <script src="<%= url %>/js/all.js">
-  </script>
-  <script src="<%= url %>/js/jquery.darktooltip.js">
-  </script>
+    <title>Down.YT - Direct Downloads From YouTube</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="<%= url %>/css/foundation.min.css">
+    <link rel="stylesheet" href="<%= url %>/css/<%= css %>">
+    <link rel="stylesheet" href="<%= url %>/css/style-font.css">
+    <link rel="stylesheet" href="<%= url %>/css/darktooltip.min.css">
+  
 </head>
 <body data-url="<%= url %>">
     <section id="all">
@@ -41,23 +31,25 @@
         <%- body %>
     </div>
     <div id="container-right">
-<!--         <a href="#howuse">
+        <a href="#howuse">
           <div id="item" class="tooltip" data-tooltip="Help">
             ?
-        </div>
- -->    </a>
-    <a href="https://www.facebook.com/pages/DownYT/562274617197469">
-      <div id="item" class="tooltip" data-tooltip="Facebook">
-        f
-    </div>
-</a>
-<!-- <a href="mensage.html">
-  <div id="item">
-    <i class="icon-mail tooltip" data-tooltip="Email">
+          </div>
+         </a>
 
-    </i>
-</div>
-</a> -->
+
+        <a href="https://www.facebook.com/pages/DownYT/562274617197469">
+          <div id="item" class="tooltip" data-tooltip="Facebook">
+            f
+          </div>
+        </a>
+
+        <a href="https://github.com/matheusgimenez/down.yt">
+          <div id="item" class="tooltip" data-tooltip="GitHub">
+            <img src="<%= url %>/img/github-10-256.png" width="35" height="35" style="padding-top:2px;">
+          </div>
+        </a>
+
 </div>
 <div id="line-bottom">
 
@@ -74,5 +66,16 @@ ga('create', 'UA-51759007-1', 'down.yt');
 ga('send', 'pageview');
 $(document).foundation();
 </script>
+
+<!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+  </script>
+  <script src="<%= url %>/js/foundation.min.js">
+  </script>
+  <script src="<%= url %>/js/all.js">
+  </script>
+  <script src="<%= url %>/js/jquery.darktooltip.js">
+  </script>
+
 </body>
 </html>

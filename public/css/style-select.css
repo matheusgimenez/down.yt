@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 /* Isaque Brasileiro: Front-End - isaquegbmelo2@gmail.com */
 /* Matheus Gimenez : Back-End - youremail@email.com */
@@ -92,7 +92,7 @@ a #item {
 }
 
 .dark-tooltip{
-	font-family: Lao UI;
+	font-family: Open Sans;
 	border: none!important;
 	color: white!important;
 	background-color:#838383!important;
@@ -118,7 +118,7 @@ a #item {
 }
 
 #name-video{
-	font-family: Lao UI, serif;
+	font-family: Open Sans, serif;
 	font-size: 22px;
 	color: white;
 	font-weight: 500;
@@ -132,7 +132,7 @@ a #item {
 	width: 270px;
 	height:40px;
 	background-color: #E74C3C;
-	font-family: Lao UI;
+	font-family: Open Sans;
 	color: white;
 	font-size: 15px;
 	text-align: center;
@@ -147,7 +147,7 @@ a #item {
 	width: 270px;
 	height:40px;
 	background-color: #E74C3C;
-	font-family: Lao UI;
+	font-family: Open Sans;
 	color: white;
 	font-size: 15px;
 	text-align: center;
@@ -172,14 +172,14 @@ a #item {
 }
 
 #modalTitle{
-	font-family: Lao UI;
+	font-family: Open Sans;
 	font-size: 30px;
 	color: white;
 	display: block;
 }
 
 #modalTxt{
-	font-family: Lao UI;
+	font-family: Open Sans;
 	font-size: 20px;
 	color: white;
 	display: block;
@@ -195,7 +195,7 @@ a #item {
 	margin-top: 30px;
 	font-size: 23px;
 	line-height: 40px;
-	font-family: Lao UI;
+	font-family: Open Sans;
 }
 
 #musicModal{

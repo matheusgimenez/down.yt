@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 /* Isaque Brasileiro: Front-End - isaquegbmelo2@gmail.com */
 /* Matheus Gimenez : Back-End - youremail@email.com */
@@ -61,7 +61,7 @@ a {text-decoration: none;}
 	height: 35px;
 	background-color: white;
 	border: none;
-	font-family: Lao UI;
+	font-family: Open Sans;
 	font-size: 15px;
 	text-align: center;
 	float: left;
@@ -73,7 +73,7 @@ a {text-decoration: none;}
 	height: 35px;
 	background-color: #E74C3C;
 	color: white;
-	font-family: Lao UI;
+	font-family: Open Sans;
 	font-size: 16px;
 	line-height: 35px;
 }
@@ -137,7 +137,7 @@ a #item {
 }
 
 .dark-tooltip{
-	font-family: Lao UI;
+	font-family: Open Sans;
 	border: none!important;
 	color: white!important;
 	background-color:#838383!important;

@@ -1,11 +1,12 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
 
 /* Isaque Brasileiro: Front-End - isaquegbmelo2@gmail.com */
 /* Matheus Gimenez : Back-End - youremail@email.com */
 
 /*RESET*/
 body,html{height:100%;min-height:100%}body{overflow-x:hidden;webkit-animation:bugfix infinite 1s}@-webkit-keyframes bugfix{from,to{padding:0}}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}*{border:0;box-sizing:border-box;margin:0;moz-box-sizing:border-box;outline:0!important;padding:0;webkit-box-sizing:border-box;webkit-focus-ring-color:transparent!important;webkit-tap-highlight-color:transparent!important}html{font-size:1em;ms-text-size-adjust:1em;webkit-text-size-adjust:1em}body{vertical-align:baseline}button,html,input,select,textarea{font-family:inherit;}
-@import url(http://fonts.googleapis.com/earlyaccess/notosanslaoui.css);
+
 
 a {text-decoration: none;}
 
@@ -160,3 +161,49 @@ a #item {
 	bottom: 0px;
 }
 
+/*MOBILE*/
+
+@media (max-width:604px){
+	#logo {
+		width:166px;
+		height:116px;
+		background: url(../img/logo_mini.png) no-repeat center;
+	}
+
+	#sus-form{
+		width:60%;
+	}
+
+	.basic-input{
+		width:80%;
+	}
+}
+
+
+@media (max-width: 353px){
+	
+	.basic-input {
+		width:73.35%;
+		font-size: 13px;
+	}
+	
+	.basic-button{
+		font-size:13px;
+	}
+
+	#sus-form {
+		width:45%;
+	}
+
+	#item{
+		width:28px;
+		height: 28px;
+		font-size: 17px;
+	}
+
+	#container-right {
+		position: absolute;
+		right: 15px;
+		top: 25px;
+	}
+}

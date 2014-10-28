@@ -60,3 +60,48 @@ a {text-decoration: none;}
 	opacity: 0.8;
 	padding-top: 50px;
 }
+
+@media (max-width:604px){
+	#logo {
+		width:166px;
+		height:116px;
+		background: url(../img/logo_mini.png) no-repeat center;
+	}
+
+	#sus-form{
+		width:60%;
+	}
+
+	.basic-input{
+		width:80%;
+	}
+}
+
+
+@media (max-width: 353px){
+	
+	.basic-input {
+		width:73.35%;
+		font-size: 13px;
+	}
+	
+	.basic-button{
+		font-size:13px;
+	}
+
+	#sus-form {
+		width:45%;
+	}
+
+	#item{
+		width:28px;
+		height: 28px;
+		font-size: 17px;
+	}
+
+	#container-right {
+		position: absolute;
+		right: 15px;
+		top: 25px;
+	}
+}

@@ -205,3 +205,130 @@ a #item {
 	box-shadow: none!important;
 	border: 0px!important;
 }
+
+#r-video{
+	width: 560px;
+	height: 315px;
+}
+
+@media (max-width:604px){
+	#logo {
+		width:166px;
+		height:116px;
+		background: url(../img/logo_mini.png) no-repeat center;
+	}
+
+	#sus-form{
+		width:60%;
+	}
+
+	.basic-input{
+		width:80%;
+	}
+
+	#container {
+		width: 400px;
+		height: 330px;
+		margin-top: 20px;
+	}
+
+	#r-video {
+		width: 370px;
+		height: 235px;
+	}
+
+	#download-video {
+	width: 175px;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	margin-top: 2px;
+	float: left;
+	font-weight: 300;
+	}
+
+	a #download-mp3{
+		width: 175px;
+		height: 30px;
+		font-size: 16px;
+		line-height: 30px;
+		float: left;
+		margin-left: 20px;
+		margin-top: 2px;
+
+	}
+
+	#name-video {
+		font-size: 20px;
+	}
+}
+
+
+@media (max-width: 353px){
+	
+	.basic-input {
+		width:73.35%;
+		font-size: 13px;
+	}
+	
+	.basic-button{
+		font-size:13px;
+	}
+
+	#sus-form {
+		width:45%;
+	}
+
+	#item{
+		width:28px;
+		height: 28px;
+		font-size: 17px;
+	}
+
+	#container-right {
+		position: absolute;
+		right: 15px;
+		top: 25px;
+	}
+
+
+
+	
+
+	#container {
+		width: 280px;
+		height: 330px;
+		margin-top: 20px;
+	}
+
+	#r-video {
+		width: 250px;
+	}
+
+	#download-video {
+	width: 120px;
+	height: 30px;
+	font-size: 13px;
+	line-height: 30px;
+	margin-top: 2px;
+	float: left;
+	font-weight: 300;
+	}
+
+	a #download-mp3{
+		width: 120px;
+		height: 30px;
+		font-size: 13px;
+		line-height: 30px;
+		float: left;
+		margin-left: 10px;
+		margin-top: 2px;
+
+	}
+
+	#name-video {
+		font-size: 17px;
+	}
+
+	
+}

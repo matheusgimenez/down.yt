@@ -13,7 +13,7 @@ var app = module.exports = express.createServer();
 
 // Configuration
 siteinfo = {};
-siteinfo.url = 'http://localhost:666';
+siteinfo.url = 'http://down.yt';
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
@@ -40,6 +40,6 @@ app.get('/download/audio/:id', downloader.audio);
 app.get('/help', help.help);
 app.get('/help/', help.help);
 
-app.listen(666, function(){
+app.listen(80, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

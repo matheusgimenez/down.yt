@@ -58,7 +58,7 @@ exports.audio = function (req, res) {
                     fs.open(dir+file+'.mp3', "r", function(error, fd) {
                         if (!error) {
                             console.log('existe');
-                            res.write('<a class="large-12 medium-12 columns button radius envia" href="http://'+siteinfo.url+'/user-files/' + file + '.mp3" download>Click to download</a>');
+                            res.write('<a class="large-12 medium-12 columns button radius envia" href="'+siteinfo.url+'/user-files/' + file + '.mp3" download>Click to download</a>');
                             res.end();
                         }
                         else{

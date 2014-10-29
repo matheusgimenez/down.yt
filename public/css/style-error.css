@@ -22,6 +22,7 @@ a {text-decoration: none;color: white;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#525254',GradientType=1 );
 	padding-top: 30px;
 	background-attachment: fixed;
+	background-size: cover; 
 
 }
 

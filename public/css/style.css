@@ -22,7 +22,7 @@ a {text-decoration: none;}
 	background: -ms-radial-gradient(center, ellipse cover,  #6d6d6d 0%,#525254 100%); 
 	background: radial-gradient(ellipse at center,  #6d6d6d 0%,#525254 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#525254',GradientType=1 );
-
+	background-size: cover; 
 
 }
 

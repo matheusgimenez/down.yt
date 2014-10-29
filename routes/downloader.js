@@ -7,7 +7,7 @@ exports.original = function (req, res) {
     var id = req.params.id;
     var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/home/deshawn/node/down.yt/public/user-files/';
+    var dir = '/root/node/down.yt/public/user-files/';
     var request = require('request');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {
         if (validate_response.statusCode == 200 && id.search('&') == '-1' && id.search('&amp;') == '-1'){
@@ -37,7 +37,7 @@ exports.audio = function (req, res) {
     var id = req.params.id;
     var id = id.replace(/(["\s'$`\\])/g,'\\$1');
     var file = id;
-    var dir = '/home/deshawn/node/down.yt/public/user-files/';
+    var dir = '/root/node/down.yt/public/user-files/';
     var request = require('request');
     var fs = require('fs');
     request('http://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=' + id, function (validate_error, validate_response, validate_content) {

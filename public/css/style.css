@@ -5,7 +5,7 @@
 /* Matheus Gimenez : Back-End - youremail@email.com */
 
 /*RESET*/
-body,html{height:100%;min-height:100%}body{overflow-x:hidden;webkit-animation:bugfix infinite 1s}@-webkit-keyframes bugfix{from,to{padding:0}}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}*{border:0;box-sizing:border-box;margin:0;moz-box-sizing:border-box;outline:0!important;padding:0;webkit-box-sizing:border-box;webkit-focus-ring-color:transparent!important;webkit-tap-highlight-color:transparent!important}html{font-size:1em;ms-text-size-adjust:1em;webkit-text-size-adjust:1em}body{vertical-align:baseline}button,html,input,select,textarea{font-family:inherit;}
+body,html{height:100%!important;min-height:100%!important}body{overflow-x:hidden;webkit-animation:bugfix infinite 1s}@-webkit-keyframes bugfix{from,to{padding:0}}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{border:0;font:inherit;margin:0;padding:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:none}table{border-collapse:collapse;border-spacing:0}*{border:0;box-sizing:border-box;margin:0;moz-box-sizing:border-box;outline:0!important;padding:0;webkit-box-sizing:border-box;webkit-focus-ring-color:transparent!important;webkit-tap-highlight-color:transparent!important}html{font-size:1em;ms-text-size-adjust:1em;webkit-text-size-adjust:1em}body{vertical-align:baseline}button,html,input,select,textarea{font-family:inherit;}
 
 
 a {text-decoration: none;}
@@ -13,6 +13,10 @@ a {text-decoration: none;}
 #all {
 	width: 100%;
 	height: 100%;
+	position:fixed;
+	left:0;
+	bottom:0;
+	right:0;
 	background: #6d6d6d;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2ZDZkNmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTI1MjU0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
 	background: -moz-radial-gradient(center, ellipse cover,  #6d6d6d 0%, #525254 100%); 
@@ -22,7 +26,7 @@ a {text-decoration: none;}
 	background: -ms-radial-gradient(center, ellipse cover,  #6d6d6d 0%,#525254 100%); 
 	background: radial-gradient(ellipse at center,  #6d6d6d 0%,#525254 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#525254',GradientType=1 );
-	background-size: cover; 
+	background-size: cover cover; 
 
 }
 
@@ -157,8 +161,8 @@ a #item {
 	width: 100%;
 	height: 8px;
 	background-color: rgba(158,158,158,0.32);
-	position: absolute;
-	bottom: 0px;
+	position: fixed;
+	bottom: 100px;
 }
 
 /*MOBILE*/

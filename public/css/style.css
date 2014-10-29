@@ -162,7 +162,7 @@ a #item {
 	height: 8px;
 	background-color: rgba(158,158,158,0.32);
 	position: fixed;
-	bottom: 100px;
+	bottom: 0px;
 }
 
 /*MOBILE*/

@@ -18,14 +18,6 @@ a {text-decoration: none;}
 	bottom:0;
 	right:0;
 	background: #6d6d6d;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2ZDZkNmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTI1MjU0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-radial-gradient(center, ellipse cover,  #6d6d6d 0%, #525254 100%); 
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#6d6d6d), color-stop(100%,#525254)); 
-	background: -webkit-radial-gradient(center, ellipse cover,  #6d6d6d 0%,#525254 100%);
-	background: -o-radial-gradient(center, ellipse cover,  #6d6d6d 0%,#525254 100%); 
-	background: -ms-radial-gradient(center, ellipse cover,  #6d6d6d 0%,#525254 100%); 
-	background: radial-gradient(ellipse at center,  #6d6d6d 0%,#525254 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#525254',GradientType=1 );
 	background-size: cover cover; 
 
 }

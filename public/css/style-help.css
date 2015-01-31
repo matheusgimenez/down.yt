@@ -36,6 +36,7 @@ a {text-decoration: none;}
 	margin-right: auto;
 	margin-left: auto;
 	background:url(http://new.down.yt/img/logo.png) no-repeat;
+	display:block;
 }
 
 #how-help{

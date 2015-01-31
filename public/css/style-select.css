@@ -46,7 +46,7 @@ a {text-decoration: none;color: white;}
 	margin-right: auto;
 	margin-left: auto;
 	background-size: 180px;
-	
+	display:block;
 }
 
 a #item {

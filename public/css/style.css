@@ -65,6 +65,7 @@ a {text-decoration: none;}
 }
 
 .basic-button{
+	cursor: pointer;
 	width: 68px;
 	height: 35px;
 	background-color: #E74C3C;

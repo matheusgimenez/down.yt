@@ -39,6 +39,7 @@ a {text-decoration: none;}
 	margin-right: auto;
 	margin-left: auto;
 	background:url(../img/logo.png) no-repeat;
+	display:block;
 }
 
 #sus-form{
